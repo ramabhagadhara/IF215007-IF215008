@@ -1,4 +1,4 @@
-# Template Proposal
+# Gampang Kerja
 
 ## Permasalahan
 - Banyaknya Orang yang kesusahan mencari kerja dan susahnya orang untuk mendapatkan calon perkeja yang berkualitas
