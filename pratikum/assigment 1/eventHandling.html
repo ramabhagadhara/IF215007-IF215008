@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <h2>Tambah Data Panen</h2>
+<form action="" method="post" enctype="multipart/form-data">
+       
+<div class="form-floating mb-3">
+  <input type="test" name="id_panen" class="form-control" id="id_panen" placeholder="id_panen">
+  <label for="id_panen">id Panen</label>
+</div>
+<div class="form-floating mb-3">
+  <input type="text" name="nama_benih" class="form-control" id="nama_benih" placeholder="nama_benih">
+  <label for="nama_benih">Nama Benih</label>
+</div>
+<div class="form-floating mb-3">
+  <input type="text" name="hasil_panen" class="form-control" id="hasil_panen" placeholder="hasil_panen">
+  <label for="hasil_panen">Hasil Panen</label>
+</div>
+<div class="form-floating mb-3">
+  <input type="text" name="harga_jual" class="form-control" id="harga_jual" placeholder="harga_jual">
+  <label for="harga_jual">Harga Jual</label>
+</div>
+<div class="form-floating mb-3">
+  <input type="date" name="tanggal_panen" class="form-control" id="tanggal_panen" placeholder="tanggal_panen">
+  <label for="tanggal_panen">Tanggal Panen</label>
+</div>
+  <button type="submit" id="submit" class="btn btn-primary">Simpan</button>
+ </form>
+ <br>
+ <table class="table">
+  <thead class="table-dark">
+  <tr>
+      <th scope="col">id panen</th>
+      <th scope="col">nama benih</th>
+      <th scope="col">hasil panen</th>
+      <th scope="col">harga jual</th>
+      <th scope="col">tanggal panen</th>
+    </tr>
+  </thead>
+  <tbody id="daftar-lahan">
+  
+  </tbody>
+</table>
+</div>
+
+
+    <script>   
+
+    function tampilkanData(){
+      const dataTersimpan = localStorage.getItem("dataTersimpan");
+      var dataTersimpanObjectarray = JSON.parse(dataTersimpan);
+      if(dataTersimpanObjectarray === null) {
+                dataTersimpanObjectarray = [];
+            }
+
+      const resumeLahan = document.getElementById("daftar-lahan");
+
+      let isiResumeLahan = ``;
+
+      dataTersimpanObjectarray.forEach(function(dataTersimpanObject,index){
+        isiResumeLahan +=`
+          <tr>
+            <td>${dataTersimpanObject.id_panen}</td>
+            <td>${dataTersimpanObject.nama_benih}</td>
+            <td>${dataTersimpanObject.hasil_panen}</td>
+            <td>${dataTersimpanObject.harga_jual}</td>
+            <td>${dataTersimpanObject.tanggal_panen}</td>
+            </tr>
+        `;
+      });
+      resumeLahan.innerHTML = isiResumeLahan;
+    }
+
+    tampilkanData();
+
+        var inputId = document.getElementById("id_panen");
+        var inputBenih = document.getElementById("nama_benih");
+        var inputPanen = document.getElementById("hasil_panen");
+        var inputHarga = document.getElementById("harga_jual");
+        var inputTanggal = document.getElementById("tanggal_panen");
+        var inputSubmit = document.getElementById("submit");
+
+        inputSubmit.onclick = function(perwakilanEvent){
+          const id =inputId.value;
+          const benih = inputBenih.value;
+          const panen = inputPanen.value;
+          const harga = inputHarga.value;
+          const tanggal = inputTanggal.value;
+          const pesan = `Data Dari ${benih},telah dikirim`
+          const data = {
+            id,benih,panen,harga,tanggal,
+          };
+
+          console.log(data);
+
+          const dataTersimpan = localStorage.getItem("Data tersimpan");
+          const dataTersimpanObjectarray = JSON.parse(dataTersimpan)
+
+          if(dataTersimpan === null){
+            localStorage.setItem("Data Tersimpan",JSON.stringify([data]));
+          }else{
+            dataTersimpanObjectarray.push(data);
+            localStorage.setItem("Data Tersimpan",JSON.stringify(dataTersimpanObjectarray));
+          }
+          tampilkanData();
+        };
+
+        inputSubmit.onmouseenter = function(perwakilanEvent){
+          perwakilanEvent.target.innerHTML = "jangan kirim data";
+        };
+        inputSubmit.onmouseleave = function(perwakilanEvent){
+          perwakilanEvent.target.innerHTML = "Boleh kirim dara";
+        };
+    </script>
+</body>
+</html>
