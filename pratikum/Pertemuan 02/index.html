@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Dokument</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="form-container">
+        <form 
+        action="http://localhost:3000/penduduk" 
+        method="POST">
+            <input name="nik" placeholder="nik" />
+            <input name="nama" placeholder="nama" />
+            <input name="alamat" placeholder="alamat" />  
+            <input type="submit" name="value" id=""> 
+            <button id="post-json-button">post via json</button>   
+        </form>
+    </div>
+    <div id="table-container">
+        <table border="1">
+            <thead>
+                <tr>
+                    <td>NIK</tdf>
+                    <td>NAMA</td>
+                    <td>ALAMAT</td>
+                </tr>
+            </thead>
+            
+        </table>
+    </div>
+    <script>
+        function getElementValue(elementName) {
+            return document.getElementsByName(elementName)[0].value;
+        }
+
+        let nik = document.getElementsByName("nik")[0].value;
+        let nama = getElementValue("nama");
+        let alamat = getElementValue("alamat");
+        let postJSONButton = document.getElementById("post-json-button");
+        postJSONButton.onclick = function (e) {
+            e.preventDefault();
+
+            let urlPost = document.getElementById("form").getAttribute("action");
+            let dataJSON = {
+                nama: nama,
+                nik: nik,
+                alamat: alamat,
+            }
+            console.log(dataJSON);
+            let config = {
+                method: 'POST',
+                body: JSON.stringify(dataJSON),
+                headers: new Headers({
+                    'Content-Type': 'application/json; charset=UTF-8',
+                })
+            }
+
+            fetch(urlPost, config).then(function (response) {
+                console.log(response);
+            });
+        }
+    </script>
+
+</body>
+
+</html>
