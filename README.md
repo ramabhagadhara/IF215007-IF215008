@@ -42,7 +42,7 @@
             <td>Demo : <a href="https://github.com/ramabhagadhara/IF215007-IF215008/tree/main/pratikum/Linux%20Server%20Operation">Linux server operation</td><td>5 :heavy_check_mark:</td>
         </tr>
         <tr>
-            <td>Demo : <a href="">Nginx / Apache web server installation & operation</td><td>5 </td>
+            <td>Demo : <a href="https://github.com/ramabhagadhara/IF215007-IF215008/tree/main/pratikum/Nginx%20&%20web%20server%20instalation%20&%20operation">Nginx / Apache web server installation & operation</td><td>5 :heavy_check_mark:</td>
         </tr>
         <tr>
             <td>Demo : <a href="">Cpanel operation</td><td>4</td>
