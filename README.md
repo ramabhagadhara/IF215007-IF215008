@@ -39,7 +39,7 @@
             <td>Demo : <a href="https://github.com/ramabhagadhara/IF215007-IF215008/tree/main/pratikum/NodeJs%20%26%20NPM%20Install">NodeJS & NPM installation, operation & hello world</td><td>4 :heavy_check_mark:</td>
         </tr>
         <tr>
-            <td>Demo : <a href="https://github.com/Nurkholis070401/IF215007-IF215008/blob/main/Praktikum%20Web/Pertemuan%2004/README.md">Linux server operation</td><td>5 :heavy_check_mark:</td>
+            <td>Demo : <a href="https://github.com/ramabhagadhara/IF215007-IF215008/tree/main/pratikum/Linux%20Server%20Operation">Linux server operation</td><td>5 :heavy_check_mark:</td>
         </tr>
         <tr>
             <td>Demo : <a href="">Nginx / Apache web server installation & operation</td><td>5 </td>
