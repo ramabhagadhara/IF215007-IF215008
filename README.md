@@ -70,10 +70,10 @@
             <td>Demo : <a href="">PHP DB - Dynamic Web Page</td><td>5</td>
         </tr>
         <tr>
-            <td>Demo : <a href="https://github.com/Nurkholis070401/BooksApp">PHP DB - Web Service</td><td>5 :heavy_check_mark:</td>
+            <td>Demo : <a href="https://github.com/ramabhagadhara/IF214002/tree/main/uas-pratikum">PHP DB - Web Service</td><td>5 :heavy_check_mark:</td>
         </tr>
         <tr>
-            <td>Demo : OOP-based PHP Project using Composer</td><td>4</td>
+            <td>Demo :  <a href="https://github.com/ramabhagadhara/IF214002/tree/main/uas-pratikum"> OOP-based PHP Project using Composer</td><td>4 :heavy_check_mark:</td>
         </tr>    
         <tr>
             <td>Demo : Deploy PHP Project to Cpanel</td><td>4</td>
@@ -83,7 +83,7 @@
             <td rowspan=6>35 %</td>
         </tr>
         <tr>
-            <td>Demo : <a href="">HTML Responsive Layout with Bootstrap</td><td>3 :heavy_check_mark:</td>
+            <td>Demo : <a href="https://github.com/ramabhagadhara/IF214002/tree/main/uas-pratikum">HTML Responsive Layout with Bootstrap</td><td>3 :heavy_check_mark:</td>
         </tr>
         <tr>
             <td>Demo : <a href="">Single Page App with React & React-router</td><td>12 :heavy_check_mark:</td>
@@ -92,7 +92,7 @@
             <td>Demo : Dynamic Web Page using Laravel</td><td>9</td>
         </tr>
         <tr>
-            <td>Demo : Web Service using Slim</td><td>6</td>
+            <td>Demo : <a href="https://github.com/ramabhagadhara/IF214002/tree/main/uas-pratikum"> Web Service using Slim</td><td>6 :heavy_check_mark:</td>
         </tr>
         <tr>
             <td>Demo : News Site using Wordpress</td><td>5</td>
