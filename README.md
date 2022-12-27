@@ -58,13 +58,13 @@
             <td>Demo : <a href="https://github.com/ramabhagadhara/IF215007-IF215008/tree/main/pratikum/responsive-layout">HTML Responsive Layout with Media Query & Flexbox</td><td>3 :heavy_check_mark:</td>
         </tr>
         <tr>
-            <td>Demo : <a href="https://github.com/Nurkholis070401/IF215007-IF215008/tree/main/Praktikum%20Web/Tranformation%20Data">Javascript Data Transformation</td><td>4 :heavy_check_mark:</td>
+            <td>Demo : <a href="https://github.com/ramabhagadhara/IF215007-IF215008/tree/main/pratikum/4-transformasi-data">Javascript Data Transformation</td><td>4 :heavy_check_mark:</td>
         </tr>
         <tr>
-            <td>Demo : <a href="https://github.com/Nurkholis070401/IF215007-IF215008/tree/main/Praktikum%20Web/Pertemuan%2001/BrowserApi">Browser API - Event Handling, Local Storage, Element manipulation</td><td>5 :heavy_check_mark:</td>
+            <td>Demo : <a href="https://github.com/ramabhagadhara/IF215007-IF215008/tree/main/pratikum/browser-api">Browser API - Event Handling, Local Storage, Element manipulation</td><td>5 :heavy_check_mark:</td>
         </tr>
         <tr>
-            <td>Demo : <a href="https://github.com/Nurkholis070401/IF215007-IF215008/tree/main/Praktikum%20Web/Pertemuan%2002">HTTP GET & POST using Form Action and Fetch API</td><td>5 :heavy_check_mark:</td>
+            <td>Demo : <a href="https://github.com/ramabhagadhara/IF215007-IF215008/tree/main/pratikum/Pertemuan%2002">HTTP GET & POST using Form Action and Fetch API</td><td>5 :heavy_check_mark:</td>
         </tr>    
         <tr>
             <td>Demo : <a href="">PHP DB - Dynamic Web Page</td><td>5</td>
