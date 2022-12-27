@@ -21,7 +21,7 @@
             <td>Demo : <a href="https://github.com/ramabhagadhara/IF215007-IF215008/tree/main/pratikum/Git%20Project%20init">Github project initialization</td><td>1 :heavy_check_mark:</td>
         </tr>
         <tr>
-            <td>Demo : <a href="https://user-images.githubusercontent.com/100669802/209055072-1cfd9b3d-aea8-4339-bd9f-18f3707ee29c.png">Hoppscotch / Postman access</td><td>1 :heavy_check_mark:</td>
+            <td>Demo : <a href="https://github.com/ramabhagadhara/IF215007-IF215008/tree/main/pratikum/Postman">Hoppscotch / Postman access</td><td>1 :heavy_check_mark:</td>
         </tr>
         <tr>
             <td>Demo : <a href="https://github.com/Nurkholis070401/IF215007-IF215008/tree/main/Praktikum%20Web/PHP%20%26%20Composer%20installation%20%26%20hello%20world">PHP & Composer installation & hello world</td><td>2 :heavy_check_mark:</td>
