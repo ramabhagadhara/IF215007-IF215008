@@ -24,7 +24,7 @@
             <td>Demo : <a href="https://github.com/ramabhagadhara/IF215007-IF215008/tree/main/pratikum/Postman">Hoppscotch / Postman access</td><td>1 :heavy_check_mark:</td>
         </tr>
         <tr>
-            <td>Demo : <a href="https://github.com/Nurkholis070401/IF215007-IF215008/tree/main/Praktikum%20Web/PHP%20%26%20Composer%20installation%20%26%20hello%20world">PHP & Composer installation & hello world</td><td>2 :heavy_check_mark:</td>
+            <td>Demo : <a href="https://github.com/ramabhagadhara/IF215007-IF215008/tree/main/pratikum/PHP%20&%20Composer%20Instalation">PHP & Composer installation & hello world</td><td>2 :heavy_check_mark:</td>
         </tr>
         <tr>
             <td>Demo : <a href="https://github.com/Nurkholis070401/IF215007-IF215008/tree/main/Praktikum%20Web/PostgreSQL%20%26%20MySQL%20installation">PostgreSQL / MySQL installation</td><td>2 :heavy_check_mark:</td>
