@@ -55,7 +55,7 @@
             <td rowspan=9>35 %</td>
         </tr>
         <tr>
-            <td>Demo : <a href="https://github.com/Nurkholis070401/IF215007-IF215008/tree/main/Praktikum%20Web/Pertemuan%2001/Responsivelayout">HTML Responsive Layout with Media Query & Flexbox</td><td>3 :heavy_check_mark:</td>
+            <td>Demo : <a href="https://github.com/ramabhagadhara/IF215007-IF215008/tree/main/pratikum/responsive-layout">HTML Responsive Layout with Media Query & Flexbox</td><td>3 :heavy_check_mark:</td>
         </tr>
         <tr>
             <td>Demo : <a href="https://github.com/Nurkholis070401/IF215007-IF215008/tree/main/Praktikum%20Web/Tranformation%20Data">Javascript Data Transformation</td><td>4 :heavy_check_mark:</td>
