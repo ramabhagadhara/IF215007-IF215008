@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+
+    <style>
+        .aplikasi-pendaftaran {
+            display: flex;
+            flex-direction: row;
+        }
+        .form-pendaftaran, .resume-pendaftaran {
+            display: flex;
+            flex-direction: column;
+            padding: 5px;
+            flex-grow: 1;
+        }
+        .form-pendaftaran input, .form-pendaftaran select, .form-pendaftaran h1{
+            margin-bottom: 5px;
+        }
+        .resume-daftar-mahasiswa-table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="aplikasi-pendaftaran">
+        <div class="form-pendaftaran">
+            <h1>Form Pendaftaran Mahasiswa</h1>
+
+            <input id="input-nama" placeholder="Nama" />
+            <input id="input-asal" placeholder="Asal" />
+            <select id="input-jurusan">
+                <option value="Teknik Informatika">Teknik Informatika</option>
+                <option value="Teknik Elektro">Teknik Elektro</option>
+                <option value="Fisika">Fisika</option>
+            </select>
+
+            <button id="input-submit-button">Kirim Data</button>
+        </div>
+
+        <div class="resume-pendaftaran">
+            <h1>Halo <span id="resume-nama"></span></h1>
+            <table class="resume-daftar-mahasiswa-table" border="1">
+                <thead>
+                    <tr>
+                        <td>No</td>
+                        <td>Nama</td>
+                        <td>Asal</td>
+                        <td>Jurusan</td>
+                    </tr>
+                </thead>
+                <tbody id="resume-daftar-mahasiswa-tbody">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function tampilkanData() {
+            const dataTersimpan = localStorage.getItem("dataTersimpan");
+            const dataTersimpanObjectArray = JSON.parse(dataTersimpan);
+            console.log("nih", dataTersimpanObjectArray);
+
+            const resumeDaftarMahasiswaTbody = document.getElementById("resume-daftar-mahasiswa-tbody"); 
+
+            let isianResumeDaftarMahasiswaTbody = ``;
+
+            dataTersimpanObjectArray.forEach(function(dataTersimpanObject, index) {
+                isianResumeDaftarMahasiswaTbody += `
+                    <tr>
+                        <td>${index + 1}</td>
+                        <td>${dataTersimpanObject.nama}</td>
+                        <td>${dataTersimpanObject.asal}</td>
+                        <td>${dataTersimpanObject.jurusan}</td>
+                    </tr>
+                `;
+            });
+
+            resumeDaftarMahasiswaTbody.innerHTML = isianResumeDaftarMahasiswaTbody;
+        }
+
+        tampilkanData();
+
+        var inputNama = document.getElementById("input-nama");
+        var inputNamaByQuery = document.querySelector("#input-nama");
+        var inputAsal = document.getElementById("input-asal");
+        var inputJurusan = document.getElementById("input-jurusan");
+        var inputSubmitButton = document.getElementById("input-submit-button");
+
+        inputSubmitButton.onclick = function(perwakilanEvent) {
+            const nama = inputNama.value;
+            const asal = inputAsal.value;
+            const jurusan = inputJurusan.value;
+            const pesan = `Data dari ${nama}, asal ${asal} jurusan ${jurusan}, telah dikirim !`;
+            const data = {
+                nama,
+                asal,
+                jurusan,
+            };
+
+            console.log(data);
+
+            const dataTersimpan = localStorage.getItem("dataTersimpan");
+            const dataTersimpanObjectArray = JSON.parse(dataTersimpan) 
+
+            if(dataTersimpan === null) {
+                localStorage.setItem("dataTersimpan", JSON.stringify([data]));
+            } else {
+                dataTersimpanObjectArray.push(data);
+                localStorage.setItem("dataTersimpan", JSON.stringify(dataTersimpanObjectArray));
+            }
+
+            tampilkanData();
+
+            // localStorage.setItem()
+            // alert(pesan);
+        };
+
+        inputSubmitButton.onmouseenter = function(perwakilanEvent) {
+            perwakilanEvent.target.innerHTML = "Jangan Kirim Data";
+        };
+
+        inputSubmitButton.onmouseleave = function(perwakilanEvent) {
+            perwakilanEvent.target.innerHTML = "Boleh Kirim Data";
+        };
+        
+    </script>
+</body>
+</html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+
+    <style>
+        .aplikasi-pendaftaran {
+            display: flex;
+            flex-direction: row;
+        }
+        .form-pendaftaran, .resume-pendaftaran {
+            display: flex;
+            flex-direction: column;
+            padding: 5px;
+            flex-grow: 1;
+        }
+        .form-pendaftaran input, .form-pendaftaran select, .form-pendaftaran h1{
+            margin-bottom: 5px;
+        }
+        .resume-daftar-mahasiswa-table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="aplikasi-pendaftaran">
+        <div class="form-pendaftaran">
+            <h1>Form Pendaftaran Mahasiswa</h1>
+
+            <input id="input-nama" placeholder="Nama" />
+            <input id="input-asal" placeholder="Asal" />
+            <select id="input-jurusan">
+                <option value="Teknik Informatika">Teknik Informatika</option>
+                <option value="Teknik Elektro">Teknik Elektro</option>
+                <option value="Fisika">Fisika</option>
+            </select>
+
+            <button id="input-submit-button">Kirim Data</button>
+        </div>
+
+        <div class="resume-pendaftaran">
+            <h1>Halo <span id="resume-nama"></span></h1>
+            <table class="resume-daftar-mahasiswa-table" border="1">
+                <thead>
+                    <tr>
+                        <td>No</td>
+                        <td>Nama</td>
+                        <td>Asal</td>
+                        <td>Jurusan</td>
+                    </tr>
+                </thead>
+                <tbody id="resume-daftar-mahasiswa-tbody">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function tampilkanData() {
+            const dataTersimpan = localStorage.getItem("dataTersimpan");
+            const dataTersimpanObjectArray = JSON.parse(dataTersimpan);
+            console.log("nih", dataTersimpanObjectArray);
+
+            const resumeDaftarMahasiswaTbody = document.getElementById("resume-daftar-mahasiswa-tbody"); 
+
+            let isianResumeDaftarMahasiswaTbody = ``;
+
+            dataTersimpanObjectArray.forEach(function(dataTersimpanObject, index) {
+                isianResumeDaftarMahasiswaTbody += `
+                    <tr>
+                        <td>${index + 1}</td>
+                        <td>${dataTersimpanObject.nama}</td>
+                        <td>${dataTersimpanObject.asal}</td>
+                        <td>${dataTersimpanObject.jurusan}</td>
+                    </tr>
+                `;
+            });
+
+            resumeDaftarMahasiswaTbody.innerHTML = isianResumeDaftarMahasiswaTbody;
+        }
+
+        tampilkanData();
+
+        var inputNama = document.getElementById("input-nama");
+        var inputNamaByQuery = document.querySelector("#input-nama");
+        var inputAsal = document.getElementById("input-asal");
+        var inputJurusan = document.getElementById("input-jurusan");
+        var inputSubmitButton = document.getElementById("input-submit-button");
+
+        inputSubmitButton.onclick = function(perwakilanEvent) {
+            const nama = inputNama.value;
+            const asal = inputAsal.value;
+            const jurusan = inputJurusan.value;
+            const pesan = `Data dari ${nama}, asal ${asal} jurusan ${jurusan}, telah dikirim !`;
+            const data = {
+                nama,
+                asal,
+                jurusan,
+            };
+
+            console.log(data);
+
+            const dataTersimpan = localStorage.getItem("dataTersimpan");
+            const dataTersimpanObjectArray = JSON.parse(dataTersimpan) 
+
+            if(dataTersimpan === null) {
+                localStorage.setItem("dataTersimpan", JSON.stringify([data]));
+            } else {
+                dataTersimpanObjectArray.push(data);
+                localStorage.setItem("dataTersimpan", JSON.stringify(dataTersimpanObjectArray));
+            }
+
+            tampilkanData();
+
+            // localStorage.setItem()
+            // alert(pesan);
+        };
+
+        inputSubmitButton.onmouseenter = function(perwakilanEvent) {
+            perwakilanEvent.target.innerHTML = "Jangan Kirim Data";
+        };
+
+        inputSubmitButton.onmouseleave = function(perwakilanEvent) {
+            perwakilanEvent.target.innerHTML = "Boleh Kirim Data";
+        };
+        
+    </script>
+</body>
+</html>
